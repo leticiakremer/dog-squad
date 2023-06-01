@@ -88,12 +88,13 @@ void main() {
       },
     ));
 
-
     await tester.pump(const Duration(seconds: 2));
-    final botaodanovatela= find.byKey(const Key('botaonovatela'));
+    final botaodanovatela = find.byKey(const Key('botaonovatela'));
 
-    //Apertar o botão favoritados
     await tester.tap(botaodanovatela);
     await tester.pumpAndSettle();
+
+    final teladefavoritos = find.byKey(const Key('teladefavoritos'));
+    expect(teladefavoritos, findsOneWidget);
   });
 }

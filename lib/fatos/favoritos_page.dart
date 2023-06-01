@@ -7,6 +7,7 @@ class FavoritosPage extends StatelessWidget {
   Widget build(BuildContext context) {
     //key no scaffold
     return Scaffold(
+       key: const Key("teladefavoritos"),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text("Favoritos"),
